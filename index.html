@@ -1,16 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Amrei Neumaier | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </head>
+
 <body>
 
- <p>hello</p>   
- <p>neuer Text</p>
+<nav>
+
+    <div class="logo">
+        PORTFOLIO
+    </div>
+
+    <ul>
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#analog">Analog</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#digital">Digital</a></li>
+        <li><a href="#personal">Personal</a></li>
+
+    </ul>
+
+</nav>
+
+
+<header class="hero" id="home">
+
+    <img src="Images/wasser.png" class="hero-bg">
+
+    <div class="hero-text">
+
+        <h1>AMREI NEUMAIER</h1>
+
+        <p>
+            ART • FILM • MULTIMEDIA DESIGN
+        </p>
+
+    </div>
+
+</header>
+
+
+<section class="fish-section">
+
+    <h2>Featured 3D</h2>
+
+    <model-viewer
+        src="Models/fisch.glb"
+        auto-rotate
+        shadow-intensity="1">
+    </model-viewer>
+
+    <audio id="fishSound">
+        <source src="Audio/fishmarket.mp3" type="audio/mpeg">
+    </audio>
+
+
+</section>
+
+<section id="about">
+
+    <div class="about-content">
+
+        <div class="about-text">
+            <h2>About</h2>
+            <p>Hi, I'm AMREI Neumaier an Art and Multimedia student at LMU Munich with a passion for visual storytelling and interdisciplinary creative work.
+
+My portfolio brings together projects from photography, filmmaking, digital media, painting, and design, exploring different ways of creating and communicating my ideas. I am interested in the intersection of image, motion, and emotion, using visual media to communicate my thoughts stories and caputre my own perspectives.
+
+This website is a selection of my work, creative experiments, and ongoing projects. Thank you for taking the time to explore my portfolio—I hope you enjoy it.
+
+            </p>
+        </div>
+
+        <div class="about-images">
+            <img src="Images/diving.png" alt="Diving">
+            <img src="Images/ami.JPG" alt="Portrait von Amrei">
+        </div>
+
+    </div>
+
+</section>
+
+<section id="analog">
+
+    <div class="gallery-header">
+
+        <h2>Analog</h2>
+
+        <p>
+            Selected works on film photography and experimental visual projects.
+        </p>
+
+    </div>
+
+    <div id="analogGallery" class="masonry-gallery"></div>
+
+</section>
+
+<section id="gallery">
+
+    <div class="gallery-header">
+
+        <h2>Gallery</h2>
+
+        <p>
+            A selection of photographs from everyday life, travel and visual storytelling.
+        </p>
+
+    </div>
+
+    <div class="masonry-gallery" id="masonryGallery"></div>
+
+</section>
+
+<section id="digital">
+
+    <div class="gallery-header">
+
+        <h2>Digital</h2>
+
+        <p>
+            Motion design, 3D and digital experiments.
+        </p>
+
+    </div>
+
+    <div id="digitalGallery"></div>
+
+</section>
+
+
+<section id="personal">
+
+    <h2>Featured Films</h2>
+
+    <div id="filmGrid" class="film-grid"></div>
+
+    <div id="filmGrid" class="film-grid"></div>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
 
 </html>
-

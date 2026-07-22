@@ -1,0 +1,815 @@
+/* ---------------- RESET ---------------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+    background:#F5F2ED;
+    color:#111;
+    overflow-x:hidden;
+
+}
+
+
+/* ---------------- NAVIGATION ---------------- */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:28px 60px;
+
+    z-index:1000;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(245,242,237,.45);
+
+    transition:.4s;
+
+}
+
+nav.scrolled{
+
+    background:rgba(255,255,255,.88);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+    font-family:"Anton",sans-serif;
+
+    font-size:22px;
+
+    letter-spacing:4px;
+
+    color:#111;
+
+}
+
+
+nav ul{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#111;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+
+    height:1px;
+
+    background:#111;
+
+    transition:.35s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+.hero-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hero-text{
+
+    position:absolute;
+
+    bottom:70px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    text-align:center;
+
+    color:white;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.hero-text h1{
+
+    font-family:"Anton",sans-serif;
+
+    font-size:42px;
+
+    letter-spacing:18px;
+
+    font-weight:400;
+
+    margin-bottom:16px;
+
+    text-shadow:none;
+
+}
+
+.hero-text p{
+
+    font-size:14px;
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    color:white;
+
+    max-width:none;
+
+}
+
+/* ---------------- ANALOG ---------------- */
+
+#analog{
+    padding:140px 5%;
+}
+
+#analog h2{
+    margin-bottom:50px;
+}
+
+.analog-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:35px;
+
+    width:100%;
+}
+
+.landscape{
+
+    width:100%;
+    height:340px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.portrait-large{
+
+    width:100%;
+    height:560px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.portrait-small{
+
+    width:100%;
+    height:340px;
+
+    object-fit:contain;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.landscape:hover,
+.portrait-large:hover,
+.portrait-small:hover{
+
+    transform:translateY(-6px);
+
+}
+/* ---------------- Animation ---------------- */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translate(-50%,40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translate(-50%,0);
+
+    }
+
+}
+
+
+/* ---------------- Sections ---------------- */
+
+section{
+
+    padding:140px 12%;
+
+}
+
+section:nth-child(even){
+
+    background:white;
+
+}
+
+h2{
+
+    font-family:"Inter", sans-serif;
+
+    font-size:16px;
+
+    font-weight:300;
+
+    letter-spacing:10px;
+
+    text-transform:uppercase;
+
+    color:#444;
+
+    margin-bottom:50px;
+
+}
+
+p{
+
+    max-width:700px;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#333;
+
+}
+
+
+/* ---------------- ABOUT ---------------- */
+
+.about-content{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:start;
+    gap:60px;
+}
+
+.about-images{
+    display:flex;
+    gap:20px;
+}
+
+.about-images img{
+    width:220px;
+    height:320px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* ---------------- 3D ---------------- */
+
+.fish-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+model-viewer{
+
+    width:700px;
+
+    height:700px;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ---------------- FILMS ---------------- */
+
+#personal{
+
+    background-image:url("Images/orangeblau.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.filmGrid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    margin-top:60px;
+
+}
+
+video{
+
+    width:100%;
+
+    border-radius:22px;
+
+    transition:.4s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+video:hover{
+
+    transform:translateY(-8px);
+
+}
+
+* ---------------- ANALOG GALLERY ---------------- */
+
+
+.analog-gallery img{
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    transition:.4s ease;
+
+}
+
+.analog-gallery img:hover{
+
+    transform:scale(1.01);
+
+}
+
+* ---------------- GALLERY ---------------- */
+
+#gallery{
+
+    background:#ffffff;
+
+}
+
+.gallery-header{
+
+    margin-bottom:60px;
+
+}
+
+.gallery-header p{
+
+    max-width:500px;
+
+    font-size:16px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.masonry-gallery{
+
+    column-count:3;
+
+    column-gap:20px;
+
+}
+
+.masonry-gallery img{
+
+    width:100%;
+
+    margin-bottom:20px;
+
+    display:block;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    transition:
+    transform .35s ease,
+    opacity .35s ease,
+    box-shadow .35s ease;
+
+    break-inside:avoid;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.masonry-gallery img:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.16);
+
+}
+
+/* -------- LIGHTBOX -------- */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(15,15,15,.92);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:99999;
+
+    padding:40px;
+
+}
+
+.lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.lightbox img{
+
+    max-width:90vw;
+
+    max-height:90vh;
+
+    border-radius:12px;
+
+}
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:35px;
+
+    right:45px;
+
+    color:white;
+
+    font-size:42px;
+
+    cursor:pointer;
+
+    font-weight:300;
+
+}
+
+/* ---------- DIGITAL ---------- */
+
+#digitalGallery{
+
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    margin-top:50px;
+
+}
+
+.digital-large video{
+
+    width:100%;
+    display:block;
+    border-radius:22px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.digital-small{
+
+    max-width:550px;
+
+}
+
+.digital-small video{
+
+    width:100%;
+    display:block;
+    border-radius:22px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+/* ---------- Featured Films ---------- */
+
+.film-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:28px;
+    margin-top:50px;
+}
+
+.film-card{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.film-card video{
+    width:100%;
+    display:block;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.film-card:hover video{
+    transform:scale(1.02);
+}
+
+@media(max-width:900px){
+
+    .film-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+/* ---------- UNIVERSAL MASONRY ---------- */
+
+.masonry-gallery{
+
+    column-count:3;
+
+    column-gap:22px;
+
+}
+
+.masonry-gallery img,
+.masonry-gallery video{
+
+    width:100%;
+
+    display:block;
+
+    margin-bottom:22px;
+
+    border-radius:18px;
+
+    break-inside:avoid;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.masonry-gallery img:hover,
+.masonry-gallery video:hover{
+
+    transform:translateY(-5px);
+
+}
+
+@media(max-width:1000px){
+
+.masonry-gallery{
+
+column-count:2;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.masonry-gallery{
+
+column-count:1;
+
+}
+
+}
+
+/* -------- Responsive -------- */
+
+@media(max-width:1000px){
+
+.masonry-gallery{
+
+column-count:2;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.masonry-gallery{
+
+column-count:1;
+
+}
+
+}
+/* ---------------- Responsive ---------------- */
+
+@media(max-width:900px){
+
+nav{
+
+padding:20px;
+
+}
+
+nav ul{
+
+gap:18px;
+
+}
+
+.logo{
+
+font-size:18px;
+
+}
+
+.hero-text h1{
+
+font-size:24px;
+
+letter-spacing:8px;
+
+}
+
+.hero-text p{
+
+font-size:11px;
+
+letter-spacing:4px;
+
+}
+
+h2{
+
+    font-family:"Inter", sans-serif;
+
+    font-size:16px;
+
+    font-weight:300;
+
+    letter-spacing:10px;
+
+    text-transform:uppercase;
+
+    color:#444;
+
+    margin-bottom:50px;
+
+}
+
+.filmGrid{
+
+grid-template-columns:1fr;
+
+}
+
+}
