@@ -18,6 +18,7 @@
     <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
+
 </head>
 
 <body>
@@ -63,16 +64,36 @@
 
     <h2>Featured 3D</h2>
 
-    <model-viewer
-        src="Models/fisch.glb"
-        auto-rotate
-        shadow-intensity="1">
-    </model-viewer>
+    <div class="fish-container">
+
+        <model-viewer
+            src="Models/fisch.glb"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1"
+            exposure="1">
+        </model-viewer>
+
+        <div class="ar-card">
+
+            <h3>Experience in AR</h3>
+
+            <p>
+                Scan the QR code to place the fish
+                in your own environment.
+            </p>
+
+            <img src="Images/qr.png" alt="QR Code" class="qr">
+
+            <span>Compatible with  iPhone & 🤖 Android</span>
+
+        </div>
+
+    </div>
 
     <audio id="fishSound">
         <source src="Audio/fishmarket.mp3" type="audio/mpeg">
     </audio>
-
 
 </section>
 

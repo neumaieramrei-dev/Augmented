@@ -813,3 +813,70 @@ grid-template-columns:1fr;
 }
 
 }
+
+.fish-container{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:100px;
+
+    width:100%;
+
+    margin-top:50px;
+
+    flex-wrap:wrap;
+}
+
+.ar-card{
+
+    max-width:320px;
+
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.ar-card h3{
+
+    font-family:"Anton", sans-serif;
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+.ar-card p{
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
+}
+
+.qr{
+
+    width:220px;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+}
+
+.qr:hover{
+
+    transform:scale(1.05);
+
+}
+
+.ar-card span{
+
+    font-size:.9rem;
+
+    opacity:.7;
+
+}
