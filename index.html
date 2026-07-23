@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script type="module"
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </head>
 
@@ -42,7 +41,6 @@
 
 </nav>
 
-
 <header class="hero" id="home">
 
     <img src="Images/wasser.png" class="hero-bg">
@@ -51,14 +49,11 @@
 
         <h1>AMREI NEUMAIER</h1>
 
-        <p>
-            ART • FILM • MULTIMEDIA DESIGN
-        </p>
+        <p>ART • FILM • MULTIMEDIA DESIGN</p>
 
     </div>
 
 </header>
-
 
 <section class="fish-section">
 
@@ -79,8 +74,7 @@
             <h3>Experience in AR</h3>
 
             <p>
-                Scan the QR code to place the fish
-                in your own environment.
+                Scan the QR code to place the fish in your own environment.
             </p>
 
             <img src="Images/qr.png" alt="QR Code" class="qr">
@@ -102,19 +96,24 @@
     <div class="about-content">
 
         <div class="about-text">
+
             <h2>About</h2>
-            <p>Hi, I'm AMREI Neumaier an Art and Multimedia student at LMU Munich with a passion for visual storytelling and interdisciplinary creative work.
 
-My portfolio brings together projects from photography, filmmaking, digital media, painting, and design, exploring different ways of creating and communicating my ideas. I am interested in the intersection of image, motion, and emotion, using visual media to communicate my thoughts stories and caputre my own perspectives.
+            <p>
+                Hi, I'm AMREI Neumaier, an Art and Multimedia student at LMU Munich with a passion for visual storytelling and interdisciplinary creative work.
 
-This website is a selection of my work, creative experiments, and ongoing projects. Thank you for taking the time to explore my portfolio—I hope you enjoy it.
+                My portfolio brings together projects from photography, filmmaking, digital media, painting and design, exploring different ways of creating and communicating ideas.
 
+                This website is a selection of my work, creative experiments and ongoing projects.
             </p>
+
         </div>
 
         <div class="about-images">
+
             <img src="Images/diving.png" alt="Diving">
-            <img src="Images/ami.JPG" alt="Portrait von Amrei">
+            <img src="Images/ami.JPG" alt="Portrait">
+
         </div>
 
     </div>
@@ -128,7 +127,7 @@ This website is a selection of my work, creative experiments, and ongoing projec
         <h2>Analog</h2>
 
         <p>
-            Selected works on film photography and experimental visual projects.
+            Works on film photography and experimental visual projects.
         </p>
 
     </div>
@@ -144,14 +143,17 @@ This website is a selection of my work, creative experiments, and ongoing projec
         <h2>Gallery</h2>
 
         <p>
-            A selection of photographs from everyday life, travel and visual storytelling.
+            Photographs from everyday life, travel and visual storytelling.
         </p>
 
     </div>
 
-    <div class="masonry-gallery" id="masonryGallery"></div>
+    <div id="masonryGallery" class="masonry-gallery"></div>
 
 </section>
+
+
+<!-- ================= DIGITAL ================= -->
 
 <section id="digital">
 
@@ -160,28 +162,187 @@ This website is a selection of my work, creative experiments, and ongoing projec
         <h2>Digital</h2>
 
         <p>
-            Motion design, 3D and digital experiments.
+            Digital experiments.
         </p>
 
     </div>
 
     <div id="digitalGallery"></div>
 
-</section>
-
-
-<section id="personal">
-
     <h2>Featured Films</h2>
 
     <div id="filmGrid" class="film-grid"></div>
 
-    <div id="filmGrid" class="film-grid"></div>
+    <!-- Interactive 3D -->
+
+    <section class="models-section">
+
+    <div class="gallery-header">
+
+        <h2>Interactive 3D</h2>
+
+        <p>
+            Explore interactive 3D models of the LMU-Building.
+        </p>
+
+    </div>
+
+    <div class="models-grid">
+
+            <model-viewer
+                src="Models/treppelmu.glb"
+                camera-controls
+                auto-rotate>
+            </model-viewer>
+
+            <model-viewer
+                src="Models/ganglmu.glb"
+                camera-controls
+                auto-rotate>
+            </model-viewer>
+
+        </div>
+
+    </section>
+
+</section>
+
+<!-- ================= PERSONAL ================= -->
+
+
+<section class="personal-section" id="personal">
+
+    <div class="section-header">
+        <h2>Personal</h2>
+        <p>Learn about my hard and soft skills through these flashcards.</p>
+    </div>
+
+    <div class="personal-gallery">
+
+        <div class="personal-card">
+            <img src="Images/1.png" alt="">
+            <div class="personal-overlay">
+                Me when somebody asks me if I am a good painter.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/2.png" alt="">
+            <div class="personal-overlay">
+                Me when somebody asks me if I'm creative: damn, look at my portfolio!!
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/3.png" alt="">
+            <div class="personal-overlay">
+                Me if somebody asks me about my Blender skills.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/4.png" alt="">
+            <div class="personal-overlay">
+                Me if somebody asks me if I am a good team worker.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/5.png" alt="">
+            <div class="personal-overlay">
+                Me if somebody asks me if I ever use AI for help.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/6.png" alt="">
+            <div class="personal-overlay">
+                Me if somebody asks me to work on a project together.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/7.png" alt="">
+            <div class="personal-overlay">
+                Me if people gossip.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/8.png" alt="">
+            <div class="personal-overlay">
+                Me if somebody asks me if I am an organised person.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/9.png" alt="">
+            <div class="personal-overlay">
+                Me if somebody asks me if I like Friedrich Merz.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/10.png" alt="">
+            <div class="personal-overlay">
+                Space to write something.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/11.png" alt="">
+            <div class="personal-overlay">
+                Space to write something.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/12.png" alt="">
+            <div class="personal-overlay">
+                Space to write something.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/13.png" alt="">
+            <div class="personal-overlay">
+                Space to write something.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/14.png" alt="">
+            <div class="personal-overlay">
+                Space to write something.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/15.png" alt="">
+            <div class="personal-overlay">
+                Space to write something.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/16.png" alt="">
+            <div class="personal-overlay">
+                Space to write something.
+            </div>
+        </div>
+
+        <div class="personal-card">
+            <img src="Images/17.png" alt="">
+            <div class="personal-overlay">
+                Space to write something.
+            </div>
+        </div>
+
+    </div>
 
 </section>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
