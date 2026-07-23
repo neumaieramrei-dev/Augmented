@@ -1,0 +1,164 @@
+/* ---------------- RESET ---------------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter", sans-serif;
+    background:#f7f7f5;
+    color:#111;
+    line-height:1.6;
+}
+
+
+/* ---------------- BACK BUTTON ---------------- */
+
+.back-button{
+    position:fixed;
+    top:40px;
+    left:40px;
+    text-decoration:none;
+    color:#111;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:.3s;
+    z-index:100;
+}
+
+.back-button:hover{
+    opacity:.5;
+}
+
+
+/* ---------------- PAGE ---------------- */
+
+.flashcards{
+    max-width:1400px;
+    margin:auto;
+    padding:120px 60px 100px;
+}
+
+
+/* ---------------- HEADING ---------------- */
+
+.flashcards h1{
+    font-family:"Inter", sans-serif;
+    font-weight:300;
+    font-size:24px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    text-align:left;
+    color:#444;
+    margin-bottom:40px;
+}
+
+.subtitle{
+    max-width:650px;
+    font-size:1.15rem;
+    color:#666;
+    margin-bottom:70px;
+}
+
+
+/* ---------------- GALLERY ---------------- */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+
+/* ---------------- CARD ---------------- */
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:16px;
+    cursor:pointer;
+    transition:transform .35s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card img{
+    width:100%;
+    display:block;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+
+
+/* ---------------- HOVER ---------------- */
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:rgba(0,0,0,.82);
+
+    color:white;
+    padding:30px;
+
+    opacity:0;
+    transition:.35s;
+
+    font-size:1.15rem;
+    font-weight:600;
+    line-height:1.5;
+}
+
+.card:hover .overlay{
+    opacity:1;
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media(max-width:1000px){
+
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.flashcards{
+    padding:100px 40px;
+}
+
+}
+
+@media(max-width:650px){
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+.flashcards h1{
+    font-size:4rem;
+}
+
+.subtitle{
+    font-size:1rem;
+}
+
+.back-button{
+    top:20px;
+    left:20px;
+}
+
+}
